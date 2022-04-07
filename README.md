@@ -18,8 +18,10 @@ things i need:
     - dropout
   - optimiser
   - loss -- categorical crossentropy
+  - optimisation -- batch gradient descent
   - metric -- accuracy
   - training parameters
     - batch size
+    - learning rate
     - epochs
 
