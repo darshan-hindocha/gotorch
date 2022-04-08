@@ -1,8 +1,8 @@
 # gotorch
 
-A learning project 
+### A learning project!
 
-Version 1:
+## Version 1:
 
 ability to create a basic neural network for classification on MNIST digits
 
