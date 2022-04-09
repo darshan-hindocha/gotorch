@@ -58,3 +58,5 @@ func (c *Circle) area() float64 {
 > This is much easier to read, we no longer need the & operator (Go automatically knows to pass a pointer to the circle for this method) and because this function can only be used with Circles we can rename the function to just area.
 
 
+- Great Go resource: https://www.golang-book.com/books/intro
+- Linear Layer Torch: https://pytorch.org/docs/stable/_modules/torch/nn/modules/linear.html#Linear
