@@ -1,13 +1,20 @@
 package tensor
 
-type TensorInterface interface {
-	zeros(*TensorStruct, []int)
-	reshape(*TensorStruct, []int)
-	view(*TensorStruct, []int)
-	squeeze(*TensorStruct, []int)
+type TensorOperations interface {
+	initialise()
+	zeros(*Tensor, []int)
+	reshape(*Tensor, []int)
+	view(*Tensor, []int)
+	squeeze(*Tensor, []int)
 }
 
-type TensorStruct struct {
-	Tensor []float64
-	Shape  []int
+type Tensor struct {
+	Values []float64
+	Shape   []int
+}
+
+
+func (t *Tensor) Initialise() error {
+	
+	return nil
 }
