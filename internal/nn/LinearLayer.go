@@ -6,32 +6,38 @@ import (
 
 
 type LinearLayer struct {
-	weight       tensor.Tensor
-	bias         tensor.Tensor
-	shape        []int
-	in_features  int
-	out_features int
+	Weight       tensor.Tensor
+	Bias         tensor.Tensor
+	In_features  int
+	Out_features int
 }
 
-func (ll *LinearLayer) Initialise(x, y LayerData) error {
+func (l *LinearLayer) Initialise(x, y int) error {
+	l.In_features = x
+	l.Out_features = y
+
+	l.Weight = tensor.Tensor{
+		Shape: []int{l.In_features,l.Out_features}
+		Values: []float64.
+	}
 
 	return nil
 }
 
-func (ll *LinearLayer) Reset_parameters() error {
-	err := ll.weight.Initialise()
+func (l *LinearLayer) Reset_parameters() error {
+	err := l.weight.Initialise()
 	if err != nil {
 		return err
 	}
 
-	err = ll.bias.Initialise()
+	err = l.bias.Initialise()
 	if err != nil {
 		return err
 	}
 	return nil
 }
 
-func (ll *LinearLayer) Forward() error {
+func (l *LinearLayer) Forward() error {
 	
 	return nil
 }
