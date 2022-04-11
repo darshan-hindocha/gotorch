@@ -3,6 +3,7 @@ package tensor
 type TensorOperations interface {
 	initialise()
 	Zeros()
+	Shape()
 	reshape(*Tensor, []int)
 	view(*Tensor, []int)
 	squeeze(*Tensor, []int)
@@ -19,6 +20,7 @@ func (t *Tensor) Initialise() error {
 	return nil
 }
 
+
 func (t *Tensor) Zeros(tensorShape map[int]int) error {
 	t.Shape = tensorShape
 	t.Dimensions = len(tensorShape)
@@ -31,4 +33,10 @@ func (t *Tensor) Zeros(tensorShape map[int]int) error {
 		values[i] = arraySlice
 	}	
 
+}
+
+
+func (t *Tensor) Shape() error {
+
+	return t.Shape
 }
